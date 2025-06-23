@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oXY-bd-sh6">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ScannerVC-->
+        <scene sceneID="o0P-ir-n22">
+            <objects>
+                <viewController storyboardIdentifier="ScannerVC" id="oXY-bd-sh6" customClass="ScannerVC" customModule="JSScanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vb7-06-l7V">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0JB-ev-nxP">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CuA-oQ-imY" customClass="QRCodeReaderView" customModule="JSScanner" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-scanner-frame" translatesAutoresizingMaskIntoConstraints="NO" id="WxJ-4P-3Hn">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.50588235290000005" green="0.58823529409999997" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="WxJ-4P-3Hn" firstAttribute="top" secondItem="0JB-ev-nxP" secondAttribute="top" id="2hF-2x-FiK"/>
+                                    <constraint firstAttribute="trailing" secondItem="WxJ-4P-3Hn" secondAttribute="trailing" id="6Xy-PK-9H6"/>
+                                    <constraint firstAttribute="bottom" secondItem="CuA-oQ-imY" secondAttribute="bottom" id="FTB-jJ-rBR"/>
+                                    <constraint firstAttribute="bottom" secondItem="WxJ-4P-3Hn" secondAttribute="bottom" id="WMr-f7-5fe"/>
+                                    <constraint firstItem="CuA-oQ-imY" firstAttribute="leading" secondItem="0JB-ev-nxP" secondAttribute="leading" id="fjc-nL-VSN"/>
+                                    <constraint firstAttribute="trailing" secondItem="CuA-oQ-imY" secondAttribute="trailing" id="p3B-77-MWX"/>
+                                    <constraint firstItem="CuA-oQ-imY" firstAttribute="top" secondItem="0JB-ev-nxP" secondAttribute="top" id="ube-Si-aRJ"/>
+                                    <constraint firstItem="WxJ-4P-3Hn" firstAttribute="leading" secondItem="0JB-ev-nxP" secondAttribute="leading" id="yes-Qn-8At"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSI-dD-6GT">
+                                <rect key="frame" x="106.66666666666669" y="598.66666666666663" width="180" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.45882352941176469" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="WAS-L1-ABY"/>
+                                    <constraint firstAttribute="height" constant="40" id="Z3U-gz-SqH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Upload from Gallery"/>
+                                <connections>
+                                    <action selector="btnUpload:" destination="oXY-bd-sh6" eventType="touchUpInside" id="oVc-AC-3QG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBM-Hl-seI">
+                                <rect key="frame" x="353" y="74" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="5VC-97-StV"/>
+                                    <constraint firstAttribute="width" secondItem="gBM-Hl-seI" secondAttribute="height" multiplier="1:1" id="plD-nd-3Qj"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="ic-flashlight-off"/>
+                                <state key="selected" image="ic-flashlight-on"/>
+                                <connections>
+                                    <action selector="btnTorch_clk:" destination="oXY-bd-sh6" eventType="touchUpInside" id="Q2J-iB-flZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sGH-oj-ZAx"/>
+                        <color key="backgroundColor" red="0.50588235290000005" green="0.58823529409999997" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sGH-oj-ZAx" firstAttribute="trailing" secondItem="gBM-Hl-seI" secondAttribute="trailing" constant="15" id="0e2-L4-S0S"/>
+                            <constraint firstItem="0JB-ev-nxP" firstAttribute="leading" secondItem="sGH-oj-ZAx" secondAttribute="leading" id="6dd-qX-ske"/>
+                            <constraint firstItem="0JB-ev-nxP" firstAttribute="trailing" secondItem="sGH-oj-ZAx" secondAttribute="trailing" id="7me-Qj-g5A"/>
+                            <constraint firstItem="VSI-dD-6GT" firstAttribute="centerY" secondItem="sGH-oj-ZAx" secondAttribute="centerY" constant="180" id="Hcy-pk-ZuT"/>
+                            <constraint firstItem="VSI-dD-6GT" firstAttribute="centerX" secondItem="sGH-oj-ZAx" secondAttribute="centerX" id="bxM-ar-tI9"/>
+                            <constraint firstItem="0JB-ev-nxP" firstAttribute="bottom" secondItem="Vb7-06-l7V" secondAttribute="bottom" id="elI-Ys-A2S"/>
+                            <constraint firstItem="0JB-ev-nxP" firstAttribute="top" secondItem="Vb7-06-l7V" secondAttribute="top" id="xWu-l6-svj"/>
+                            <constraint firstItem="gBM-Hl-seI" firstAttribute="top" secondItem="sGH-oj-ZAx" secondAttribute="top" constant="15" id="yQa-zJ-T2d"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnTorch" destination="gBM-Hl-seI" id="ecr-PX-pfr"/>
+                        <outlet property="btnUpload" destination="VSI-dD-6GT" id="TII-U1-p1Y"/>
+                        <outlet property="vwPreview" destination="CuA-oQ-imY" id="ExM-I3-kQs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gVT-rK-Xsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-577" y="1906"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic-flashlight-off" width="85.333335876464844" height="85.333335876464844"/>
+        <image name="ic-flashlight-on" width="85.333335876464844" height="85.333335876464844"/>
+        <image name="ic-scanner-frame" width="414" height="736"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
